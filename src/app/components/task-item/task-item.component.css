@@ -1,0 +1,32 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.actions button {
+  margin-left: 8px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.edit {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.delete {
+  background-color: #6c63ff;
+  color: white;
+}

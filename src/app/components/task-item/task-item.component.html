@@ -1,0 +1,9 @@
+<div class="task" [ngClass]="{ completed: task.status === 'completed' }">
+  <span>{{ task.title }}</span>
+
+  <div class="actions">
+    <button class="edit" (click)="toggle.emit(task.id)">Edit</button>
+    <button class="delete" (click)="delete.emit(task.id)">Delete</button>
+  </div>
+</div>
+
