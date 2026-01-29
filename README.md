@@ -22,3 +22,6 @@ A simple task-manager (To-Do list) build using angular.
 3. Structural and Attribute directives
 4. Template driven forms with validation
 5. Routing
+
+## Screenshot
+Please find the screenshot attachment in main titled Task-manager_screenshot
