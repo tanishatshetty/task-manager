@@ -12,8 +12,8 @@ A simple task-manager (To-Do list) build using angular.
 
 ## Features Implemented
 Add new tasks using a form        
-Displays the list of tasks
-Marks tasks as completed or pending
+Displays the list of tasks    
+Marks tasks as completed or pending    
 Delets tasks
 
 ## Angular Concepts Covered
