@@ -1,32 +1,54 @@
 .task {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #f3f3f3;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  justify-content: space-between;
+  background: #f8fbff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.completed span {
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task span {
+  font-size: 15px;
+  color: #1f3b5c;
+}
+
+.task.done span {
   text-decoration: line-through;
-  color: gray;
+  color: #8fa9c5;
+}
+
+.task input[type="text"] {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #c6ddf5;
 }
 
 .actions button {
-  margin-left: 8px;
-  padding: 5px 10px;
+  margin-left: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
   border: none;
+  font-size: 12px;
   cursor: pointer;
-  border-radius: 4px;
 }
 
-.edit {
-  background-color: #6c63ff;
-  color: white;
+.actions button:first-child {
+  background: #e1f0ff;
+  color: #1a4f8b;
 }
 
-.delete {
-  background-color: #6c63ff;
-  color: white;
+.actions button:last-child {
+  background: #ffe5e5;
+  color: #b30000;
+}
+
+.actions button:hover {
+  opacity: 0.85;
 }

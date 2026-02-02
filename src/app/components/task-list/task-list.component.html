@@ -1,12 +1,6 @@
-<h1 class="title">TO DO List</h1>
-
-<app-add-task></app-add-task>
-
-<p *ngIf="tasks.length === 0">No tasks available</p>
-
-<app-task-item
-  *ngFor="let task of tasks"
-  [task]="task"
-  (delete)="deleteTask($event)"
-  (toggle)="toggleTask($event)"
-></app-task-item>
+<div class="list">
+  <app-task-item
+    *ngFor="let task of taskService.getTasks()"
+    [task]="task">
+  </app-task-item>
+</div>

@@ -1,9 +1,18 @@
-<div class="task" [ngClass]="{ completed: task.status === 'completed' }">
-  <span>{{ task.title }}</span>
+<div class="task" [class.done]="task.completed">
+  <div class="task-left">
+    <input type="checkbox" (change)="toggleDone()" />
+
+    <span *ngIf="!task.isEditing">{{ task.title }}</span>
+
+    <input *ngIf="task.isEditing"
+           [(ngModel)]="editedTitle"
+           (keyup.enter)="save()" />
+  </div>
 
   <div class="actions">
-    <button class="edit" (click)="toggle.emit(task.id)">Edit</button>
-    <button class="delete" (click)="delete.emit(task.id)">Delete</button>
+    <button *ngIf="!task.isEditing" (click)="edit()">Edit</button>
+    <button *ngIf="task.isEditing" (click)="save()">Save</button>
+    <button (click)="delete()">Delete</button>
   </div>
 </div>
 

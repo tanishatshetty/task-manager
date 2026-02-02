@@ -1,23 +1,5 @@
-<form #taskForm="ngForm" (ngSubmit)="addTask(taskForm)" class="add-form">
-  <input
-    type="text"
-    name="title"
-    [(ngModel)]="title"
-    required
-    minlength="3"
-    placeholder="Enter a task"
-  />
-
-  <button type="submit" [disabled]="taskForm.invalid">
-    Add Task
-  </button>
-</form>
-
-<div class="error" *ngIf="taskForm.submitted && taskForm.invalid">
-  <small *ngIf="taskForm.controls['title']?.errors?.['required']">
-    Task title is required
-  </small>
-  <small *ngIf="taskForm.controls['title']?.errors?.['minlength']">
-    Minimum 3 characters required
-  </small>
+<div class="add-task">
+  <input [(ngModel)]="title" placeholder="Enter new task..." />
+  <button (click)="addTask()">Add</button>
 </div>
+

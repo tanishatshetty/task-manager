@@ -1,21 +1,32 @@
-.add-form {
+.add-task {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-input {
+.add-task input {
   flex: 1;
-  padding: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #c6ddf5;
+  font-size: 14px;
 }
 
-button {
-  padding: 8px 12px;
+.add-task input:focus {
+  outline: none;
+  border-color: #6fb1ff;
+}
+
+.add-task button {
+  padding: 10px 18px;
+  background: #6fb1ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
 }
 
-.error {
-  margin-top: 5px;
-  color: red;
-  font-size: 12px;
+.add-task button:hover {
+  background: #559dff;
 }
-

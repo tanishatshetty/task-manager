@@ -1,5 +1,6 @@
 export interface Task {
   id: number;
   title: string;
-  status: 'pending' | 'completed';
+  completed: boolean;
+  isEditing: boolean;
 }

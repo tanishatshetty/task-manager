@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Task } from '../models/task.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class TaskService {
   private tasks: Task[] = [];
 
@@ -11,22 +9,35 @@ export class TaskService {
     return this.tasks;
   }
 
-  addTask(title: string) {
+  addTask(title: string): void {
     this.tasks.push({
       id: Date.now(),
       title,
-      status: 'pending'
+      completed: false,
+      isEditing: false
     });
   }
 
-  deleteTask(id: number) {
-    this.tasks = this.tasks.filter(t => t.id !== id);
+  deleteTask(id: number): void {
+    this.tasks = this.tasks.filter(task => task.id !== id);
   }
 
-  toggleStatus(id: number) {
+  toggleDone(id: number): void {
+    const task = this.tasks.find(t => t.id === id);
+    if (task) task.completed = !task.completed;
+  }
+
+  startEdit(id: number): void {
+    this.tasks.forEach(t => t.isEditing = false);
+    const task = this.tasks.find(t => t.id === id);
+    if (task) task.isEditing = true;
+  }
+
+  saveEdit(id: number, title: string): void {
     const task = this.tasks.find(t => t.id === id);
     if (task) {
-      task.status = task.status === 'pending' ? 'completed' : 'pending';
+      task.title = title;
+      task.isEditing = false;
     }
   }
 }

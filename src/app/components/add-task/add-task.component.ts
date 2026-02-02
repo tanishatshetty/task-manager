@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task.service';
 
 @Component({
@@ -15,11 +15,9 @@ export class AddTaskComponent {
 
   constructor(private taskService: TaskService) {}
 
-  addTask(form: any) {
-    if (form.valid) {
-      this.taskService.addTask(this.title);
-      this.title = '';
-      form.resetForm();
-    }
+  addTask(): void {
+    if (!this.title.trim()) return;
+    this.taskService.addTask(this.title);
+    this.title = '';
   }
 }
