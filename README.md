@@ -24,4 +24,5 @@ A simple task-manager (To-Do list) build using angular.
 5. Routing
 
 ## Screenshot
-Please find the screenshot attachment in main titled Task-manager_screenshot
+Please find the screenshot attachment of the old app in main titled Task-manager_screenshot
+Please find the screenshot attachment of the updated app in main titled Task-manager-updated_screenshot
