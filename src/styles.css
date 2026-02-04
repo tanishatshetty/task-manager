@@ -1,27 +1,32 @@
-/* Global Reset */
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-}
-
 body {
-  margin: 0;
-  background: linear-gradient(135deg, #e6f3ff, #f5fbff);
-  min-height: 100vh;
+  font-family: Arial;
+  background: #f2f8ff;
 }
 
-/* Page Container */
-.container {
+.task-container {
   max-width: 600px;
-  margin: 60px auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 120, 255, 0.15);
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #1a4f8b;
+.task {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.task.done span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+button {
+  background: #4da3ff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
 }

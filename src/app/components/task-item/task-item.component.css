@@ -2,16 +2,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f8fbff;
-  border-radius: 10px;
-  padding: 12px 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 6px 18px rgba(111, 177, 255, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(111, 177, 255, 0.25);
 }
 
 .task-left {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.task-left input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #6fb1ff;
+  cursor: pointer;
 }
 
 .task span {
@@ -26,22 +39,38 @@
 
 .task input[type="text"] {
   padding: 6px 8px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #c6ddf5;
+  font-size: 14px;
+}
+
+.task input[type="text"]:focus {
+  outline: none;
+  border-color: #6fb1ff;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
 }
 
 .actions button {
-  margin-left: 6px;
   padding: 6px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
   font-size: 12px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .actions button:first-child {
   background: #e1f0ff;
   color: #1a4f8b;
+}
+
+.actions button:nth-child(2) {
+  background: #e6fff3;
+  color: #157a4c;
 }
 
 .actions button:last-child {

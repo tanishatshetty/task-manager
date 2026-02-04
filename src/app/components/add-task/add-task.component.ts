@@ -10,6 +10,7 @@ import { TaskService } from '../../services/task.service';
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
+
 export class AddTaskComponent {
   title = '';
 

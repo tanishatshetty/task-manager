@@ -22,9 +22,9 @@ export class TaskService {
     this.tasks = this.tasks.filter(task => task.id !== id);
   }
 
+  // ✅ CHANGED: checkbox now removes task
   toggleDone(id: number): void {
-    const task = this.tasks.find(t => t.id === id);
-    if (task) task.completed = !task.completed;
+    this.deleteTask(id);
   }
 
   startEdit(id: number): void {
